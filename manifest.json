@@ -1,7 +1,7 @@
 {
   "name": "Dont deploy to production on a friday",
   "version": "0.1",
-  "description": "Displays a warning when someone is trying to merge to master within a restricted time/day",
+  "description": "Displays a warning when someone is trying to merge to master on a restricted day",
   "manifest_version": 2,
   "permissions": ["activeTab", "storage"],
   "background": {
