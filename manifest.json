@@ -1,0 +1,22 @@
+{
+  "name": "Dont deploy to production on a friday",
+  "version": "0.1",
+  "description": "Displays a warning when someone is trying to merge to master within a restricted time/day",
+  "manifest_version": 2,
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "scripts": ["install.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "js": ["authenticate.js"],
+      "run_at": "document_idle",
+      "matches": ["https://github.com/*/*/pull/*"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "dashboard.html",
+    "default_icon": "icon.png"
+  }
+}
